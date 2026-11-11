@@ -18,6 +18,7 @@
         :root {
             --cream: #FFF9F0;
             --navy: #202938;
+            --yellow: #FFDA83;
         }
 
         body {
@@ -42,10 +43,44 @@
             font-family: 'Space Mono', monospace;
             font-size: 12px;
             text-decoration: none;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: var(--navy);
+            background-color: white;
+            border: 2px solid var(--navy);
+            border-radius: 30px;
+            padding: 8px 16px;
+        }
+
+        .navbar a.active {
+            background-color:var(--yellow);
+            font-weight: 700;
+        }
+            
     </style>
 </head>
 
 <body>
+    <header> 
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About Me</a>
+            <a href="bug-files.html">The Bug Files</a>
+            <a href="automation.html">Automation Lab</a>
+            <a href="resume.html">Resume</a>
+        </nav>
+    </header>
 
     <main class="container">
 
