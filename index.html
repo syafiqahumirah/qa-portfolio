@@ -28,6 +28,7 @@
 
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 115px;
         }
 
         body {
@@ -47,6 +48,87 @@
 
         .tag, .role, .window-bar {
             font-family: 'Space Mono', monospace;
+        }
+
+        /* Sticky navigation */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 16px 24px 0;
+            background: var(--cream);
+        }
+
+        .site-navbar {
+            max-width: 1120px;
+            margin: auto;
+            padding: 12px 22px;
+            border: 1.5px solid var(--navy);
+            border-radius: 20px;
+            background: var(--cream);
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .site-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 20px;
+            font-weight: 800;
+            text-decoration: none;
+            color: var(--navy);
+            white-space: nowrap;
+        }
+
+        .site-brand-symbol {
+            font-family: 'Space Mono', monospace;
+            font-size: 22px;
+            font-weight: 400;
+        }
+
+        .site-nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .site-nav-links a {
+            color: var(--navy);
+            text-decoration: none;
+            padding: 7px 15px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .site-nav-links a:hover {
+            background: var(--pink);
+            transform: translateY(-2px);
+        }
+
+        .site-nav-links a.active {
+            background: var(--yellow);
+        }
+
+        .site-github {
+            color: var(--navy);
+            font-weight: 700;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .site-brand:focus-visible,
+        .site-nav-links a:focus-visible,
+        .site-github:focus-visible {
+            outline: 3px solid #B36D36;
+            outline-offset: 3px;
         }
 
         /* Page layout */
@@ -265,6 +347,18 @@
         }
 
         /* Tablet */
+        @media (max-width: 850px) {
+            .site-navbar {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .site-nav-links {
+                order: 3;
+                width: 100%;
+            }
+        }
+
         @media (max-width: 800px) {
             .hero {
                 grid-template-columns: 1fr;
@@ -282,6 +376,28 @@
 
         /* Mobile */
         @media (max-width: 480px) {
+            .site-header {
+                padding: 10px 10px 0;
+            }
+
+            .site-navbar {
+                padding: 12px;
+                gap: 8px;
+            }
+
+            .site-brand {
+                font-size: 17px;
+            }
+
+            .site-nav-links {
+                gap: 3px;
+            }
+
+            .site-nav-links a {
+                font-size: 12px;
+                padding: 6px 9px;
+            }
+
             .cards {
                 grid-template-columns: 1fr;
             }
@@ -319,7 +435,8 @@
             }
 
             .button,
-            .card {
+            .card,
+            .site-nav-links a {
                 transition: none;
             }
         }
@@ -327,6 +444,36 @@
 </head>
 
 <body>
+
+    <!-- Sticky navigation -->
+    <header class="site-header">
+        <nav class="site-navbar" aria-label="Main navigation">
+
+            <a href="index.html" class="site-brand">
+                <span class="site-brand-symbol">&lt;/&gt;</span>
+                Umirah Bakar
+            </a>
+
+            <div class="site-nav-links">
+                <a href="index.html" class="active" aria-current="page">Home</a>
+                <a href="about.html">About</a>
+                <a href="bug-files.html">Bug Files</a>
+                <a href="automation.html">Automation</a>
+                <a href="resume.html">Resume</a>
+            </div>
+
+            <a
+                href="https://github.com/syafiqahumirah"
+                class="site-github"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit my GitHub profile">
+                GitHub ↗
+            </a>
+
+        </nav>
+    </header>
+
     <div class="container">
 
         <main>
@@ -483,5 +630,6 @@
         </footer>
 
     </div>
+
 </body>
 </html>
