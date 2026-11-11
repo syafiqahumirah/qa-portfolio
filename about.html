@@ -1,141 +1,844 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet Umirah Bakar, a Software QA Specialist with 7 years of experience in quality assurance, testing and automation.">
+  <title>About Me | Umirah Bakar</title>
 
-    <title>About Me | Umirah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #FFF9F0;
+      --navy: #202938;
+      --yellow: #FFDA83;
+      --pink: #F6AEB5;
+      --green: #CDE4B1;
+      --blue: #BBDCF5;
+    }
 
-    <style>
-        :root {
-            --cream: #FFF9F0;
-            --navy: #202938;
-            --yellow: #FFDA83;
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        body {
-            background-color: var(--cream);
-            color: var(--navy);
-            margin:0;
-            font-family: 'DM Sans', sans-serif;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        h1, h2 {
-            font-family: 'Outfit', sans-serif;
-        }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--navy);
+      font-family: 'DM Sans', sans-serif;
+      line-height: 1.6;
+    }
 
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 50px 24px;
-        }
+    a {
+      color: inherit;
+    }
 
-        .back-link {
-            color: var(--navy);
-            font-family: 'Space Mono', monospace;
-            font-size: 12px;
-            text-decoration: none;
-        }
+    h1, h2, h3, p {
+      margin-top: 0;
+    }
 
-        .navbar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            padding: 20px;
-            flex-wrap: wrap;
-        }
+    h1, h2, h3 {
+      font-family: 'Outfit', sans-serif;
+      line-height: 1.15;
+    }
 
-        .navbar a {
-            text-decoration: none;
-            color: var(--navy);
-            background-color: white;
-            border: 2px solid var(--navy);
-            border-radius: 30px;
-            padding: 8px 16px;
-        }
+    /* NAVIGATION */
 
-        .navbar a.active {
-            background-color:var(--yellow);
-            font-weight: 700;
-        }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 16px 24px 0;
+      background: var(--cream);
+    }
 
-        header {
-            position: sticky;
-            top:0;
-            z-index: 100;
-            background-color: var(--cream);
-        }
+    .navbar {
+      max-width: 1120px;
+      margin: auto;
+      padding: 12px 22px;
+      border: 1.5px solid var(--navy);
+      border-radius: 20px;
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
 
-        .story-card {
-            background-color: white;
-            border: 2px solid var(--navy);
-            border-radius: 18px;
-            padding: 28px;
-        }
-            
-    </style>
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .brand-symbol {
+      font-family: 'Space Mono', monospace;
+      font-size: 22px;
+      font-weight: 400;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      padding: 7px 15px;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .nav-links a:hover {
+      background: var(--pink);
+      transform: translateY(-2px);
+    }
+
+    .nav-links a.active {
+      background: var(--yellow);
+    }
+
+    .github-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    .github-link svg {
+      width: 28px;
+      height: 28px;
+      fill: currentColor;
+    }
+
+    /* PAGE LAYOUT */
+
+    .container {
+      max-width: 1120px;
+      margin: auto;
+      padding: 40px 24px 65px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 65px 15px 75px;
+      position: relative;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: var(--yellow);
+      border-radius: 30px;
+      padding: 8px 20px;
+      font-family: 'Space Mono', monospace;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px, 7vw, 88px);
+      font-weight: 800;
+      letter-spacing: -3px;
+      line-height: 1.08;
+      margin-bottom: 30px;
+    }
+
+    .highlight {
+      position: relative;
+      white-space: nowrap;
+      z-index: 0;
+    }
+
+    .highlight::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 5px;
+      width: 100%;
+      height: 18px;
+      background: var(--pink);
+      border-radius: 8px;
+      z-index: -1;
+      transform: rotate(-1deg);
+    }
+
+    .hero p {
+      max-width: 660px;
+      margin: auto;
+      font-size: 19px;
+      line-height: 1.7;
+    }
+
+    .sparkle {
+      position: absolute;
+      color: #F3BC2C;
+      font-size: 36px;
+      pointer-events: none;
+    }
+
+    .sparkle.left {
+      top: 80px;
+      left: 9%;
+    }
+
+    .sparkle.right {
+      right: 10%;
+      bottom: 65px;
+    }
+
+    /* SECTION HEADINGS */
+
+    .section {
+      border-top: 1px solid #C9C3B9;
+      padding: 45px 0;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin-bottom: 30px;
+    }
+
+    .section-icon {
+      width: 85px;
+      flex-shrink: 0;
+      text-align: center;
+      font-size: 55px;
+      line-height: 1;
+    }
+
+    .section-heading-text {
+      border-left: 2px solid var(--navy);
+      padding-left: 25px;
+    }
+
+    .section-heading h2 {
+      font-size: 34px;
+      margin-bottom: 5px;
+    }
+
+    .section-heading p {
+      font-size: 17px;
+      margin-bottom: 0;
+    }
+
+    /* RETRO WINDOW */
+
+    .retro-window {
+      border: 2px solid var(--navy);
+      border-radius: 20px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.6);
+      box-shadow: 5px 5px 0 rgba(32,41,56,0.05);
+    }
+
+    .window-bar {
+      background: linear-gradient(100deg, var(--yellow), #FFF0C4);
+      border-bottom: 2px solid var(--navy);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .window-dot {
+      width: 19px;
+      height: 19px;
+      border: 2px solid var(--navy);
+      border-radius: 50%;
+    }
+
+    .red { background: #FF6158; }
+    .amber { background: #FFCA43; }
+    .lime { background: #77C36C; }
+
+    .window-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      margin-left: 18px;
+    }
+
+    .window-minimize {
+      margin-left: auto;
+      font-size: 25px;
+      line-height: 1;
+    }
+
+    .window-content {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      padding: 28px 38px;
+    }
+
+    .window-illustration {
+      width: 160px;
+      flex-shrink: 0;
+      text-align: center;
+      font-size: 65px;
+      border-right: 1.5px solid var(--navy);
+      padding-right: 25px;
+    }
+
+    .window-content h3 {
+      font-size: 27px;
+      margin-bottom: 5px;
+    }
+
+    .window-content p {
+      font-size: 17px;
+      margin-bottom: 0;
+    }
+
+    /* QUALITY SECTION */
+
+    .quality-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .quality-card {
+      border: 2px solid var(--navy);
+      border-radius: 18px;
+      padding: 25px;
+      background: white;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .quality-card:hover,
+    .tool-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 5px 5px 0 var(--navy);
+    }
+
+    .quality-card:nth-child(1) { background: #FFF0D0; }
+    .quality-card:nth-child(2) { background: #FBE3E4; }
+    .quality-card:nth-child(3) { background: #E5F1D9; }
+
+    .quality-card .number {
+      font-family: 'Space Mono', monospace;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .quality-card h3 {
+      font-size: 23px;
+      margin: 18px 0 10px;
+    }
+
+    .quality-card p {
+      font-size: 15px;
+      margin-bottom: 0;
+    }
+
+    /* TECH CARDS */
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .tool-card {
+      border: 2px solid var(--navy);
+      border-radius: 20px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.6);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .tool-card-title {
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 21px;
+      font-weight: 800;
+    }
+
+    .tool-card:nth-child(1) .tool-card-title { background: #FAD8D7; }
+    .tool-card:nth-child(2) .tool-card-title { background: #E1EDCF; }
+    .tool-card:nth-child(3) .tool-card-title { background: #D5EAFB; }
+
+    .tool-card-title span {
+      font-size: 26px;
+    }
+
+    .tool-card ul {
+      padding: 12px 22px 20px;
+      margin: 0;
+      list-style: none;
+    }
+
+    .tool-card li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin: 12px 0;
+      line-height: 1.4;
+    }
+
+    .tool-card li::before {
+      content: "✓";
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1.5px solid var(--navy);
+      border-radius: 50%;
+      width: 21px;
+      height: 21px;
+      flex-shrink: 0;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    /* BEYOND QA */
+
+    .beyond {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .beyond .section-heading {
+      margin-bottom: 0;
+    }
+
+    .beyond-icons {
+      font-size: 52px;
+      white-space: nowrap;
+    }
+
+    /* FOOTER */
+
+    footer {
+      margin-top: 35px;
+      padding: 28px 0;
+      border-top: 1px solid #C9C3B9;
+      text-align: center;
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+    }
+
+    .next-page {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 22px;
+      background: var(--yellow);
+      border: 2px solid var(--navy);
+      border-radius: 30px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+
+    .next-page:hover {
+      transform: translateY(-3px);
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+      .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .nav-links {
+        order: 3;
+        width: 100%;
+      }
+
+      .quality-grid,
+      .tools-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .beyond {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 550px) {
+      header {
+        padding: 10px 10px 0;
+      }
+
+      .navbar {
+        padding: 12px;
+        gap: 8px;
+      }
+
+      .brand {
+        font-size: 17px;
+      }
+
+      .nav-links {
+        gap: 3px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+        padding: 6px 9px;
+      }
+
+      .container {
+        padding: 20px 18px 45px;
+      }
+
+      .hero {
+        padding: 55px 0 60px;
+      }
+
+      .hero h1 {
+        font-size: clamp(39px, 10vw, 58px);
+        letter-spacing: -1.5px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .highlight::after {
+        height: 11px;
+      }
+
+      .sparkle {
+        font-size: 22px;
+      }
+
+      .section {
+        padding: 32px 0;
+      }
+
+      .section-heading {
+        gap: 12px;
+      }
+
+      .section-icon {
+        width: 55px;
+        font-size: 38px;
+      }
+
+      .section-heading-text {
+        padding-left: 14px;
+      }
+
+      .section-heading h2 {
+        font-size: 25px;
+      }
+
+      .section-heading p {
+        font-size: 14px;
+      }
+
+      .window-bar {
+        padding: 10px;
+        gap: 7px;
+      }
+
+      .window-dot {
+        width: 14px;
+        height: 14px;
+      }
+
+      .window-title {
+        font-size: 17px;
+        margin-left: 7px;
+      }
+
+      .window-content {
+        padding: 24px;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .window-illustration {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1.5px solid var(--navy);
+        padding: 0 0 15px;
+      }
+
+      .window-content h3 {
+        font-size: 23px;
+      }
+
+      .window-content p {
+        font-size: 15px;
+      }
+
+      .beyond-icons {
+        font-size: 42px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
 </head>
 
 <body>
-    <header> 
-        <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="about.html" class="active">About Me</a>
-            <a href="bug-files.html">The Bug Files</a>
-            <a href="automation.html">Automation Lab</a>
-            <a href="resume.html">Resume</a>
-        </nav>
-    </header>
 
-    <main class="container">
+  <!-- STICKY NAVIGATION -->
+  <header>
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="index.html" class="brand">
+        <span class="brand-symbol">&lt;/&gt;</span>
+        Umirah Bakar
+      </a>
 
-        <a href="index.html" class="back-link">← Back to Home</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active" aria-current="page">About</a>
+        <a href="bug-files.html">Bug Files</a>
+        <a href="automation.html">Automation</a>
+        <a href="resume.html">Resume</a>
+      </div>
 
-        <h1>The human behind the bugs.</h1>
+      <a href="https://github.com/syafiqahumirah"
+         class="github-link"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Visit my GitHub profile">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.14c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.14 1.18A10.9 10.9 0 0 1 12 6.3c.97 0 1.94.13 2.85.38 2.18-1.49 3.14-1.18 3.14-1.18.62 1.59.23 2.77.11 3.06.73.81 1.18 1.84 1.18 3.1 0 4.42-2.68 5.4-5.24 5.69.41.36.77 1.06.77 2.14v3.17c0 .3.21.66.79.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
+        </svg>
+      </a>
+    </nav>
+  </header>
 
-        <p>
-            Hi, I'm Umirah! A Software QA Specialist
-            who enjoys figuring out how things work,
-            why they break, and how to make them better.
-        </p>
-     
-    <div class="story-card">
-        <h2>01 / My Story</h2>
+  <main class="container">
 
-        <p>
-             I'm a Software QA Specialist with around 7 years
-             of experience across banking, insurance, and
-             healthcare projects.
+    <!-- HERO -->
+    <section class="hero">
+      <span class="sparkle left">✳</span>
+      <span class="eyebrow">✦ ABOUT ME</span>
 
-             Over the years, I've grown from executing test
-             cases to taking greater ownership of quality,
-             improving testing processes, and collaborating
-             with teams to deliver better software.
+      <h1>
+        The QA who asks<br>
+        <span class="highlight">“what if...?”</span>
+      </h1>
 
-             Today, I'm building on that experience as I
-             work toward my next goal: becoming a QA Lead.
-        </p>
-    </div>
+      <p>
+        I'm Umirah, a Software QA Specialist with 7 years
+        of experience across banking, insurance and healthcare.
+        I care about more than finding bugs. I care about
+        building quality into the way teams work.
+      </p>
 
-        <h2>What I do</h2>
+      <span class="sparkle right">✳</span>
+    </section>
 
-        <p>
-            From manual testing to automation,
-            I work on making software more reliable
-            and improving the way teams test.
-        </p>
+    <!-- LITTLE ABOUT ME -->
+    <section class="section">
+      <div class="section-heading">
+        <div class="section-icon" aria-hidden="true">🖥️</div>
 
-    </main>
+        <div class="section-heading-text">
+          <h2>A Little About Me</h2>
+          <p>
+            I enjoy solving problems, asking the awkward questions
+            and turning feedback into better software. ✨
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BACKGROUND -->
+    <section class="section">
+      <div class="retro-window">
+        <div class="window-bar">
+          <span class="window-dot red"></span>
+          <span class="window-dot amber"></span>
+          <span class="window-dot lime"></span>
+          <span class="window-title">My Background</span>
+          <span class="window-minimize" aria-hidden="true">−</span>
+        </div>
+
+        <div class="window-content">
+          <div class="window-illustration" aria-hidden="true">💼</div>
+
+          <div>
+            <h3>7 Years in Software QA</h3>
+            <p>
+              From test planning and execution to automation,
+              defect management and release support.
+              I've worked across different industries and teams,
+              learning that good QA is as much about people
+              and decisions as it is about testing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUALITY LEADERSHIP -->
+    <section class="section">
+      <div class="section-heading">
+        <div class="section-icon" aria-hidden="true">💡</div>
+
+        <div class="section-heading-text">
+          <h2>How I Approach Quality</h2>
+          <p>
+            Testing matters. But knowing what to test,
+            why it matters and how to move a team forward matters too.
+          </p>
+        </div>
+      </div>
+
+      <div class="quality-grid">
+        <article class="quality-card">
+          <span class="number">01 / THINK AHEAD</span>
+          <h3>Ask Better Questions</h3>
+          <p>
+            I look beyond the happy path, challenge unclear
+            requirements and think about risks before
+            they become production problems.
+          </p>
+        </article>
+
+        <article class="quality-card">
+          <span class="number">02 / TAKE OWNERSHIP</span>
+          <h3>Own the Outcome</h3>
+          <p>
+            I prioritize critical scenarios, communicate
+            testing risks and make sure quality conversations
+            happen before release decisions.
+          </p>
+        </article>
+
+        <article class="quality-card">
+          <span class="number">03 / IMPROVE THE PROCESS</span>
+          <h3>Make Things Better</h3>
+          <p>
+            I look for opportunities to standardize
+            testing approaches, improve reusable automation
+            and help teams work more consistently.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- TECH AND TOOLS -->
+    <section class="section">
+      <div class="section-heading">
+        <div class="section-icon" aria-hidden="true">⚙️</div>
+
+        <div class="section-heading-text">
+          <h2>Tech & Tools</h2>
+          <p>
+            The tools I use to test, automate and keep quality on track.
+          </p>
+        </div>
+      </div>
+
+      <div class="tools-grid">
+        <article class="tool-card">
+          <div class="tool-card-title">
+            <span aria-hidden="true">⌨️</span>
+            Testing
+          </div>
+
+          <ul>
+            <li>Test Planning & Execution</li>
+            <li>SIT / UAT / Regression</li>
+            <li>Defect Tracking (Jira)</li>
+            <li>Test Documentation</li>
+          </ul>
+        </article>
+
+        <article class="tool-card">
+          <div class="tool-card-title">
+            <span aria-hidden="true">🤖</span>
+            Automation
+          </div>
+
+          <ul>
+            <li>Playwright (Python)</li>
+            <li>Robot Framework (Browser Library)</li>
+            <li>Tosca</li>
+            <li>Selenium (Java, learning)</li>
+          </ul>
+        </article>
+
+        <article class="tool-card">
+          <div class="tool-card-title">
+            <span aria-hidden="true">🗄️</span>
+            Other Tools
+          </div>
+
+          <ul>
+            <li>SQL / PL SQL (Oracle)</li>
+            <li>Postman (API Testing)</li>
+            <li>Jenkins / GitLab CI</li>
+            <li>Confluence</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- BEYOND QA -->
+    <section class="section">
+      <div class="beyond">
+        <div class="section-heading">
+          <div class="section-icon" aria-hidden="true">☕</div>
+
+          <div class="section-heading-text">
+            <h2>Beyond QA</h2>
+            <p>
+              Outside of work, you'll probably find me
+              cooking something new, planning my next trip
+              or enjoying little moments with my family. ♡
+            </p>
+          </div>
+        </div>
+
+        <div class="beyond-icons" aria-hidden="true">📷 ✈️</div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>Made with curiosity, coffee & a little bit of QA magic. ✦</p>
+
+      <a href="bug-files.html" class="next-page">
+        Next: The Bug Files →
+      </a>
+    </footer>
+
+  </main>
 
 </body>
 </html>
-
