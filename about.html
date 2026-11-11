@@ -577,39 +577,136 @@
         transition: none !important;
       }
     }
+
+    
+/* Shared navbar */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 16px 24px 0;
+  background: var(--cream);
+}
+
+.site-navbar {
+  max-width: 1120px;
+  margin: auto;
+  padding: 12px 22px;
+  border: 1.5px solid var(--navy);
+  border-radius: 20px;
+  background: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--navy);
+  white-space: nowrap;
+}
+
+.site-brand-symbol {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+}
+
+.site-nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.site-nav-links a {
+  color: var(--navy);
+  text-decoration: none;
+  padding: 7px 15px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: background .2s, transform .2s;
+}
+
+.site-nav-links a:hover {
+  background: var(--pink);
+  transform: translateY(-2px);
+}
+
+.site-nav-links a.active {
+  background: var(--yellow);
+}
+
+.site-github {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.site-github:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 850px) {
+  .site-navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .site-nav-links {
+    order: 3;
+    width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .site-header {
+    padding: 10px 10px 0;
+  }
+
+  .site-navbar {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .site-brand {
+    font-size: 17px;
+  }
+
+  .site-brand-symbol {
+    font-size: 15px;
+  }
+
+  .site-nav-links {
+    gap: 3px;
+  }
+
+  .site-nav-links a {
+    font-size: 12px;
+    padding: 6px 9px;
+  }
+}
+
   </style>
 </head>
 
 <body>
 
   <!-- Navigation -->
-  <header>
-    <nav class="navbar" aria-label="Main navigation">
-
-      <a href="index.html" class="brand">
-        <span class="brand-symbol">𐔌՞ ܸ.ˬ.ܸ՞𐦯</span>
-        umirahbkr
-      </a>
-
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html" class="active" aria-current="page">About</a>
-        <a href="bug-files.html">Bug Files</a>
-        <a href="automation.html">Automation</a>
-        <a href="resume.html">Resume</a>
-      </div>
-
-      <a
-        class="github-link"
-        href="https://github.com/syafiqahumirah"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Visit my GitHub profile">
-        GitHub ↗
-      </a>
-
-    </nav>
-  </header>
+  <
+<header id="site-header" class="site-header"></header>
 
   <main class="container">
 
@@ -838,17 +935,12 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-
-      <p>Made with curiosity &amp; coffee. ☕️ © 2026 Umirah</p>
-
-      <a href="bug-files.html" class="next-page">
-        Next: The Bug Files →
-      </a>
-
-    </footer>
+    
+<footer id="site-footer"></footer>
 
   </main>
+
+<script src="components.js" defer></script>
 
 </body>
 </html>
