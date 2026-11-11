@@ -8,13 +8,48 @@
           content="width=device-width, initial-scale=1.0">
 
     <title>About Me | Umirah</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --cream: #FFF9F0;
+            --navy: #202938;
+        }
+
+        body {
+            background-color: var(--cream);
+            color: var(--navy);
+            margin:0;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        h1, h2 {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 50px 24px;
+        }
+
+        .back-link {
+            color: var(--navy);
+            font-family: 'Space Mono', monospace;
+            font-size: 12px;
+            text-decoration: none;
+    </style>
 </head>
 
 <body>
 
-    <main>
+    <main class="container">
 
-        <a href="index.html">← Back to Home</a>
+        <a href="index.html" class="back-link">← Back to Home</a>
 
         <h1>The human behind the bugs.</h1>
 
