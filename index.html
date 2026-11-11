@@ -4,140 +4,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Umirah | QA PERSON INSIDE!</title>
+    <title>Umirah | QA Playground</title>
 
     <style>
-        /* My whimsical color palette */
         :root {
-            --cream: #FFF8E9;
-            --pink: #FCE8EF;
-            --lavender: #EFD4F3;
-            --blue: #DCE7FF;
-            --green: #DDECCF;
-            --plum: #705B7C;
+            --cream: #FFF9F0;
+            --navy: #202938;
+            --yellow: #FFDA83;
+            --pink: #F6AEB5;
+            --green: #CDE4B1;
+            --blue: #BBDCF5;
         }
-        
-        /* General page styling */
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
-            background-color: var(--cream);
-            color: var(--plum);
+            background: var(--cream);
+            color: var(--navy);
             font-family: Arial, sans-serif;
             line-height: 1.6;
         }
 
-        /* Main page container */
         .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 30px 24px;
+            max-width: 1100px;
+            margin: auto;
+            padding: 50px 24px;
         }
 
-        /* Navigation */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 60px;
-        }
-
-        .logo {
-            font-size: 22px;
-            font-weight: bold;
-        }
-
-        /* Navigation links */
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-
-        nav a {
-            color: #526D5B;
-            font-size: 14px;
-            font-weight: 500;
-            text-decoration: none;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Hero section */
+        /* Welcome section */
         .hero {
-            background-color: var(--pink);
-            padding: 50px 40px;
-            border-radius: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            align-items: center;
+            gap: 55px;
+            min-height: 420px;
         }
 
-        .eyebrow {
-            color: #526D5B;
+        /* Retro window */
+        .window {
+            border: 2px solid var(--navy);
+            border-radius: 18px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 6px 7px 0 rgba(32, 41, 56, 0.12);
+        }
+
+        .window-bar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 16px;
+            border-bottom: 2px solid var(--navy);
             font-size: 13px;
             font-weight: bold;
-            letter-spacing: 1px;
+        }
+
+        .dot {
+            width: 13px;
+            height: 13px;
+            border: 1.5px solid var(--navy);
+            border-radius: 50%;
+        }
+
+        .red { background: #FF7974; }
+        .yellow { background: #FFD55A; }
+        .green { background: #9ED27D; }
+
+        .window-content {
+            padding: 20px;
+        }
+
+        .window-content img {
+            width: 100%;
+            border-radius: 12px;
+            display: block;
+        }
+
+        /* Hero text */
+        .tag {
+            display: inline-block;
+            background: var(--yellow);
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 13px;
         }
 
         h1 {
-            font-size: clamp(32px, 6vw, 52px);
-            line-height: 1.2;
-            margin: 16px 0;
+            font-size: clamp(42px, 6vw, 70px);
+            line-height: 1.1;
+            margin: 22px 0 10px;
+            letter-spacing: -2px;
         }
 
-        .hero p {
-            max-width: 600px;
-            color: #454E47;
+        .role {
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 4px;
         }
 
-        /* Button styling */
+        .intro {
+            max-width: 500px;
+            font-size: 17px;
+            margin-top: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
         .button {
             display: inline-block;
-            margin-top: 20px;
             padding: 12px 22px;
-            background-color: var(--plum);
-            color: white;
-            text-decoration: none;
             border-radius: 30px;
+            border: 2px solid var(--navy);
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s;
         }
 
         .button:hover {
-            background-color: #3F5546;
+            transform: translateY(-4px);
         }
 
-        /* About section */
-        .about {
-            padding: 60px 0;
+        .primary {
+            background: var(--navy);
+            color: white;
         }
 
-        .about p {
-            color: #5A625B;
+        /* Navigation cards */
+        .explore {
+            margin-top: 80px;
+            padding-top: 45px;
+            border-top: 1px solid #D7D2CA;
         }
 
-        /* Footer */
+        .explore h2 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .explore p {
+            margin-bottom: 30px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .card {
+            border: 2px solid var(--navy);
+            border-radius: 18px;
+            padding: 24px 18px;
+            text-decoration: none;
+            color: var(--navy);
+            background: white;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 5px 6px 0 var(--navy);
+        }
+
+        .card-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 58px;
+            height: 58px;
+            border: 2px solid var(--navy);
+            border-radius: 12px;
+            font-size: 28px;
+        }
+
+        .card h3 {
+            margin-bottom: 5px;
+        }
+
+        .card p {
+            font-size: 14px;
+            margin: 0;
+        }
+
         footer {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            color: #818780;
-            font-size: 12px;
-            border-top: 1px solid #DDDFD9;
+            margin-top: 80px;
             padding-top: 20px;
+            border-top: 1px solid #D7D2CA;
+            font-size: 12px;
+            color: #69717B;
+            text-align: center;
         }
 
-        /* Mobile adjustments */
-        @media (max-width: 600px) {
-            header {
-                margin-bottom: 35px;
-            }
-
+        @media (max-width: 800px) {
             .hero {
-                padding: 35px 25px;
+                grid-template-columns: 1fr;
+                gap: 30px;
             }
 
-            footer {
-                flex-direction: column;
-                gap: 5px;
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 30px 20px;
             }
         }
     </style>
@@ -146,49 +231,107 @@
 <body>
     <div class="container">
 
-        <header>
-            <div class="logo">umrhbkr 𐔌՞ ܸ.ˬ.ܸ՞𐦯</div>
-            <nav aria-label="Main navigation">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="https://github.com/syafiqahumirah"
-                    target="_blank"
-                    rel="noopener noreferrer">GitHub ➹</a>
-
-        </header>
-
         <main>
-            <section class="hero" id="home">
-                <div class="eyebrow">HELLO, INTERNET! ☕️</div>
+            <section class="hero">
 
-                <h1>I find bugs for a living.</h1>
-                <h2>The software kind, obviously! 💻⚙️</h2>
+                <div class="window">
+                    <div class="window-bar">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        Umirah's QA Playground
+                    </div>
 
+                    <div class="window-content">
+                        <img
+                            src="https://images.unsplash.com/photo-1497366811353-6870744d04b2"
+                            alt="A cozy workspace"
+                        >
+                    </div>
+                </div>
 
-                <p>
-                    Hi, I'm Umirah!
-                    A Software QA Specialist who loves figuring out how things work, why they break, and how to make them better.
-                </p>
+                <div class="hero-text">
+                    <span class="tag">⌘ QA Portfolio</span>
 
-                <a href="#about" class="button">
-                    Explore my little world 🐈‍⬛💭📝
-                </a>
+                    <h1>Hi, I'm Umirah.</h1>
+
+                    <div class="role">
+                        SOFTWARE QA SPECIALIST
+                    </div>
+
+                    <p class="intro">
+                        I test, automate, and figure out why
+                        things don't work the way they should.
+                        Usually with a little curiosity
+                        (and coffee) along the way.
+                    </p>
+
+                    <div class="buttons">
+                        <a href="#explore" class="button primary">
+                            Explore My Work
+                        </a>
+
+                        <a href="about.html" class="button">
+                            About Me
+                        </a>
+                    </div>
+                </div>
+
             </section>
 
-            <section class="about" id="about">
-                <h2>A little about this space.</h2>
+            <section class="explore" id="explore">
+                <h2>What's Inside?</h2>
 
                 <p>
-                    A little space for my QA projects,
-                    automation experiments, and everything
-                    I'm learning along the way.
+                    A little look at my work, experience,
+                    and everything I'm learning along the way.
                 </p>
+
+                <div class="cards">
+
+                    <a href="about.html" class="card">
+                        <span class="card-icon"
+                              style="background:var(--yellow)">
+                            📁
+                        </span>
+                        <h3>About Me</h3>
+                        <p>My background, experience and skills.</p>
+                    </a>
+
+                    <a href="bug-files.html" class="card">
+                        <span class="card-icon"
+                              style="background:var(--pink)">
+                            🐞
+                        </span>
+                        <h3>The Bug Files</h3>
+                        <p>Testing stories and interesting defects.</p>
+                    </a>
+
+                    <a href="automation.html" class="card">
+                        <span class="card-icon"
+                              style="background:var(--green)">
+                            💻
+                        </span>
+                        <h3>Automation Lab</h3>
+                        <p>My automation journey and projects.</p>
+                    </a>
+
+                    <a href="resume.html" class="card">
+                        <span class="card-icon"
+                              style="background:var(--blue)">
+                            📄
+                        </span>
+                        <h3>Resume</h3>
+                        <p>My experience, tools and education.</p>
+                    </a>
+
+                </div>
             </section>
         </main>
 
         <footer>
-            <span>Made with curiosity &amp; coffee.</span>
-            <span>© 2026 Umirah</span>
+            Made with curiosity &amp; coffee. ☕️
+            © 2026 Umirah
         </footer>
 
     </div>
