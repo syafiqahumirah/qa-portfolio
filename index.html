@@ -37,10 +37,22 @@
             font-weight: bold;
         }
 
-        .nav-label {
-            font-size: 12px;
-            letter-spacing: 1px;
-            color: #6B706B;
+        /* Navigation links */
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        nav a {
+            color: #526D5B;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
         }
 
         /* Hero section */
@@ -126,11 +138,17 @@
 
         <header>
             <div class="logo">umirah.</div>
-            <div class="nav-label">SOFTWARE QA PORTFOLIO</div>
+            <nav aria-label="Main navigation">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="https://github.com/syafiqahumirah"
+                    target="_blank"
+                    rel="noopener noreferrer">GitHub ➹</a>
+
         </header>
 
         <main>
-            <section class="hero">
+            <section class="hero" id="home">
                 <div class="eyebrow">HELLO, WORLD! ☕️</div>
 
                 <h1>Hi, I'm Umirah.</h1>
@@ -142,7 +160,7 @@
                 </p>
 
                 <a href="#about" class="button">
-                    Getting to know me ↗
+                    Getting to know me 🐈‍⬛💭📝
                 </a>
             </section>
 
