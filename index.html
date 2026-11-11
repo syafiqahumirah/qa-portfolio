@@ -62,10 +62,10 @@
             grid-template-columns: 1fr 1.3fr;
             align-items: center;
             gap: 55px;
-            min-height: 420px;
+            min-height: auto;
         }
 
-        /* Retro window */
+        /* Retro photo window */
         .window {
             border: 2px solid var(--navy);
             border-radius: 18px;
@@ -104,21 +104,21 @@
             background: #9ED27D;
         }
 
-        /* Rounded Totoro photo */
         .window-content {
             padding: 20px;
         }
 
+        /* Rounded Totoro photo */
         .window-content img {
             width: 100%;
             height: 320px;
             object-fit: cover;
-            object-position: center 45%;
+            object-position: 55% 50%;
             border-radius: 20px;
             display: block;
         }
 
-        /* Hero text */
+        /* Hero typography */
         .tag {
             display: inline-block;
             background: var(--yellow);
@@ -142,11 +142,19 @@
             letter-spacing: 2px;
         }
 
+        /* Consistent main descriptions */
+        .intro,
+        .explore > p {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 1.8;
+            color: var(--navy);
+        }
+
         .intro {
             max-width: 500px;
-            font-size: 17px;
             margin-top: 20px;
-            line-height: 1.8;
         }
 
         /* Buttons */
@@ -185,10 +193,10 @@
             outline-offset: 4px;
         }
 
-        /* Explore section */
+        /* What's Inside section */
         .explore {
-            margin-top: 80px;
-            padding-top: 45px;
+            margin-top: 40px;
+            padding-top: 25px;
             border-top: 1px solid #D7D2CA;
         }
 
@@ -199,7 +207,6 @@
 
         .explore > p {
             margin-bottom: 35px;
-            color: #505966;
         }
 
         /* Navigation cards */
@@ -290,7 +297,8 @@
                 letter-spacing: 1px;
             }
 
-            .intro {
+            .intro,
+            .explore > p {
                 font-size: 16px;
             }
 
@@ -303,13 +311,14 @@
             }
         }
 
-        /* Accessibility */
+        /* Reduced motion */
         @media (prefers-reduced-motion: reduce) {
             html {
                 scroll-behavior: auto;
             }
 
-            .button, .card {
+            .button,
+            .card {
                 transition: none;
             }
         }
