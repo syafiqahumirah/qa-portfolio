@@ -3,7 +3,7 @@ const navLinks = [
   { label: "Home", href: "index.html" },
   { label: "About", href: "about.html" },
   { label: "The Bug Files", href: "bug-files.html" },
-  { label: "The Workbench", href: "automation.html" },
+  { label: "The Workbench", href: "workbench.html" },
   { label: "Resume", href: "resume.html" }
 ];
 
