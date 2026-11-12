@@ -2,8 +2,8 @@
 const navLinks = [
   { label: "Home", href: "index.html" },
   { label: "About", href: "about.html" },
-  { label: "Bug Files", href: "bug-files.html" },
-  { label: "Automation", href: "automation.html" },
+  { label: "The Bug Files", href: "bug-files.html" },
+  { label: "The Workbench", href: "automation.html" },
   { label: "Resume", href: "resume.html" }
 ];
 
